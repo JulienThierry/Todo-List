@@ -5,7 +5,9 @@ const storeList = () => {
 };
 
 const getList = () => {
-  todoList.innerHTML = window.localStorage.todoStorage;
+  if (window.localStorage.todoStorage) {
+    todoList.innerHTML = window.localStorage.todoStorage;
+  }
 };
 
 getList();
