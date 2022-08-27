@@ -7,6 +7,8 @@ const storeList = () => {
 const getList = () => {
   if (window.localStorage.todoStorage) {
     todoList.innerHTML = window.localStorage.todoStorage;
+  } else {
+    todoList.innerHTML = "<li>Cliquez sur un Todo pour le supprimer</li>";
   }
 };
 
